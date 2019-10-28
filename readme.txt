@@ -85,3 +85,6 @@ To Run Them Together
     - MEHMETs-MacBook-Pro:client mehmetak$ cd client
     - MEHMETs-MacBook-Pro:client mehmetak$ rm -rf .git
 
+- Install some dependencies in client
+    - cd client
+    - npm install axios react-router-dom uuid react-transition-group
