@@ -88,3 +88,31 @@ To Run Them Together
 - Install some dependencies in client
     - cd client
     - npm install axios react-router-dom uuid react-transition-group
+
+- Font Awesome
+    https://fontawesome.com/account
+        mehmetak78@hotmail.com
+        P*****
+    - Find your kit's cdn
+        https://fontawesome.com/kits/e3a0cdb38a/use
+    - Add cdn to index.html
+        <script src="https://kit.fontawesome.com/e3a0cdb38a.js" crossorigin="anonymous"></script>
+    - Check for İcons
+        https://fontawesome.com/icons?d=gallery&m=free
+    - Use Icon
+        <i className="fas fa-ambulance"></i>
+
+- Create a React Component
+    rscp: Creates a stateless React component with PropTypes and ES6 module system
+    rsc: Creates a stateless React component without PropTypes and ES6 module system
+
+- Regex Sample
+            case FILTER_CONTACTS:
+                return {
+                    ...state,
+                    filtered: state.contacts.filter(contact => {
+                        const regex = new RegExp(`${action.payload}`,"gi");
+                        return contact.name.match(regex) || contact.email.match(regex)
+                    })
+
+                };
