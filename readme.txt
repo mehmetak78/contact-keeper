@@ -34,6 +34,9 @@ To Run Them Together
     - Commit
         - MEHMETs-MacBook-Pro:contact-keeper mehmetak$ git commit -m "Initial Commit"
 
+    - Share in GitHub
+        VCS/Import Into Version Control/Share Project in Github
+
 - Use Express Validator for validation requests
     const { check, validationResult } = require('express-validator/check');
 
@@ -59,7 +62,8 @@ To Run Them Together
          - Use middleware in the routes that you want protected access
 
 -------- Client
-
+- ceate react app
+    mehmetak@MEHMETs-MacBook-Pro contact-keeper % create-react-app client
 - To run them together use Concurently
     - In server's package.json
           "scripts": {
@@ -80,3 +84,4 @@ To Run Them Together
     - Delete README.md in client folder.
     - MEHMETs-MacBook-Pro:client mehmetak$ cd client
     - MEHMETs-MacBook-Pro:client mehmetak$ rm -rf .git
+
