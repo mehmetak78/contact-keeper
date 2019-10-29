@@ -9,6 +9,21 @@ To Run Them Together
 
 *************
 
+- Put all Context in the directory "context"
+- Put action types in "types.js"
+- For each context define
+    ....Context
+    ....Reducer
+    ....State
+- You can copy and use these 3 files from any context to implement a new one.
+- Use "useState" for component based states.
+- Use "useEffect" for running code for example instead of "componentDidMount", or any state has changed. See examples
+- Use "useRef" for direct access to DOM objects
+
+- To Deploy HEROKU see chapter 72
+
+*************
+
 - Create an empty project called "contact-keeper"
 - npm init
     MEHMETs-MacBook-Pro:contact-keeper mehmetak$ npm init -y
