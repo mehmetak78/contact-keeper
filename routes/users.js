@@ -15,11 +15,13 @@ router.post("/",
             .isEmpty(),
         check("email", "Please include a valie email")
             .isEmail(),
-        check("password", "Please enter a password with 6 or more characters")
-            .isLength({min:6})
+        check("password", "Please enter a password with 2 or more characters")
+            .isLength({min:2})
     ],
     async (req, res) => {
+
         const errors = validationResult(req);
+        console.log(errors);
         if (!errors.isEmpty()) {
             return res.status(400).json({errors: errors.array()});
         }
@@ -27,7 +29,9 @@ router.post("/",
         const {name, email, password} = req.body;
 
         try {
+
             let user = await User.findOne({email});
+
             if (user) {
                 return res.status(400).json({msg: "User Already Exists"});
             }
@@ -36,6 +40,7 @@ router.post("/",
                                 email,
                                 password
                             });
+
             const salt =  await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(password, salt);
             await user.save();
@@ -47,7 +52,7 @@ router.post("/",
 
             jwt.sign(payload, config.get("jwtSecret"), {expiresIn: 360000}, (err, token) => {
                 if (err) throw err;
-                res.json(token);
+                res.json({token});
             } )
         }
         catch(err) {

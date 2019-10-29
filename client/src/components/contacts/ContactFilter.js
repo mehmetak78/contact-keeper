@@ -1,6 +1,6 @@
 import React, {useContext, useRef, useEffect} from 'react';
 import ContactContext from "../../context/contact/ContactContext";
-import PropTypes from 'prop-types';
+
 
 const ContactFilter = props => {
     const contactContext = useContext(ContactContext);
@@ -29,8 +29,5 @@ const ContactFilter = props => {
     );
 };
 
-ContactFilter.propTypes = {
-
-};
 
 export default ContactFilter;
